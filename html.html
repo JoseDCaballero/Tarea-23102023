@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparición de Cuadrados</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>    
+    <div class="container" id="container"></div>
+    <div id="timer">Tiempo restante: 20 segundos</div>
+    <div id="color-buttons" class="color-table">
+       <!-- Aquí vamos a mostrar los botones de colores cuando corresponda-->
+    </div>
+    <button id="restart-button">Reiniciar Juego</button>
+    <div id="random-color">Color aleatorio:</div>
+    <div id="contador">Tiempo transcurrido: 0 minutos 0 segundos</div>
+    <div id="conteo">0 carros pintados</div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <h2>Resultado del juego</h2>
+          <p id="modalContador">Tiempo transcurrido: 0 minutos 0 segundos</p>
+          <p id="modalConteo">0 carros pintados</p>
+        </div>
+      </div>
+      
+    <script src="script.js"></script>  
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparición de Cuadrados</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container" id="container"></div>
+    <div class="timer-container">
+        <div id="timer">Tiempo restante: 20 segundos</div>
+    </div>
+    <div id="color-buttons" class="color-table">
+        Aquí vamos a mostrar los botones de colores cuando corresponda
+    </div>
+    <button id="restart-button">Reiniciar Juego</button>
+    <div id="random-color">Color aleatorio:</div>
+    <div id="tiempo">Tiempo transcurrido: 0 minutos 0 segundos</div>
+    <script>
+/*document.getElementById('restart-button').addEventListener('click', () => {
+    // Reiniciar el juego
+    clearInterval(timerInterval);
+    clearInterval(minuteInterval); // Detener el contador de minutos
+    const container = document.getElementById('container');
+    container.innerHTML = '';
+    timeLeft = 20;
+    cooldown = 20;
+    squareCount = 0;
+    pila = [];
+    correctChoices = 0; // Reiniciar el contador de elecciones correctas
+    document.getElementById('timer').textContent = 'Tiempo restante: 20 segundos';
+    minutes = 0;
+    seconds = 0;
+    contadorElement.textContent = 'Tiempo transcurrido: 0 minutos 0 segundos';
+    document.getElementById('conteo').textContent = '0 carros pintados'; // Reiniciar el contador de coches pintados
+    updateColorButtons();
+    timerInterval = setInterval(updateTimer, 1000);
+    minuteInterval = setInterval(updateCounter, 1000);
+});
+*/  
+
+        let timeLeft = 20;
+        let squareCount = 0;
+        let timerInterval;
+        let pila = [];
+        let cooldown = 20;
+        let colors = [
+            'red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'brown',
+            'grey', 'lightblue', 'lime', 'violet', 'black', 'silver', 'gold', 'beige'
+        ];
+
+        let totalSeconds = 0;
+
+        function createSquare() {
+            const container = document.getElementById('container');
+            const square = document.createElement('div');
+            square.classList.add('square');
+            container.appendChild(square);
+            squareCount++;
+
+            if (squareCount === 3) {
+                // Reducir el tiempo de espera a 10 segundos
+                cooldown = 10;
+                pila.push(3);
+            }
+            else if (squareCount === 4) {
+                // Reducir el tiempo de espera a 5 segundos
+                cooldown = 5;
+                pila.push(4);
+            }
+            else if (squareCount === 5) {
+                // Detener el juego y mostrar un mensaje
+                clearInterval(timerInterval);
+                document.getElementById('timer').textContent = 'Juego terminado, se alcanzó el límite de carros (5)';
+            }
+
+            else if (squareCount === 1) {
+                // Cuando aparece el primer cuadro, mostrar los botones de colores
+                updateColorButtons();
+            }
+        }
+
+        function updateColorButtons() {
+            const colorButtons = document.getElementById('color-buttons');
+            // Limpiar los botones de colores
+            colorButtons.innerHTML = '';
+            // Mostrar todos los colores
+            for (const color of colors) {
+                const colorButton = document.createElement('button');
+                colorButton.classList.add('color-button');
+                colorButton.style.backgroundColor = color;
+                colorButton.addEventListener('click', () => checkColor(color, colorButton));
+                colorButtons.appendChild(colorButton);
+            }
+        }
+
+        function checkColor(color, colorButton) {
+            if (color === document.getElementById('random-color').textContent.replace('Color aleatorio: ', '')) {
+                // Eliminar un valor de la pila y un contenedor
+                pila.pop();
+                squareCount--;
+                const container = document.getElementById('container');
+                container.removeChild(container.lastChild);
+                // Limpiar los botones de colores y el color aleatorio
+                updateColorButtons();
+                document.getElementById('random-color').textContent = 'Color aleatorio:';
+            }
+            if (pila.length === 0) {
+                // La pila está vacía, reiniciar el contador a 20 segundos
+                cooldown = 20;
+            }
+        } -->
+
+        

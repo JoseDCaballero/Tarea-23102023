@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+main {
+    margin: 20px auto; /* Aplica margen automático a izquierda y derecha para centrar */
+    max-width: 600px; /* Establece un ancho máximo para el contenido */
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centra el texto dentro del menú */
+}
+
+.menu-list li {
+    margin: 10px 0;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu-list a:hover {
+    color: #007bff;
+}
