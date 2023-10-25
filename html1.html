@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazar valor en una pila</title>
+    <link rel="stylesheet" type="text/css" href="act9style.css">
+</head>
+<body>  
+    <h1>Reemplazar valor en una pila</h1>
+    <div class="container-horizontal">
+        <div class="menu-horizontal">
+            <main id="izquierda">
+                <label for="agregar">Agregar a la Pila:</label>
+                <input type="number" id="agregar">
+                <br><br>
+                <button onclick="agregarValor()">Agregar a la Pila</button>
+                <br><div id="pila">Pila:</div><br>
+            </main>
+            <aside id="derecha">
+                <label for="nuevo">Nuevo Valor:</label>
+                <input type="number" id="nuevo">
+                <label for="viejo">Valor a Reemplazar:</label>
+                <input type="number" id="viejo">
+                <br><br>
+                <button onclick="reemplazarValor()">Reemplazar Valor</button>
+                <br><br>
+                <button onclick="mostrarPilaAlert()">Mostrar Pila</button>  
+            </aside>
+        </div>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="html1.js"></script>
+</body>
+</html>

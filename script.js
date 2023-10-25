@@ -71,7 +71,7 @@ function updateColorButtons() {
 }
 
 function checkColor(color, colorButton) {
-    if (color === document.getElementById('random-color').textContent.replace('Color aleatorio: ', '')) {
+    if (color === document.getElementById('random-color').textContent.replace('Color: ', '')) {
         dequeue();
         squareCount--;
         const container = document.getElementById('container');
@@ -82,7 +82,7 @@ function checkColor(color, colorButton) {
         document.getElementById('conteo').textContent = `${correctChoices} carro${correctChoices === 1 ? '' : 's'} pintado${correctChoices === 1 ? '' : 's'}`;
 
         updateColorButtons();
-        document.getElementById('random-color').textContent = 'Color aleatorio:';
+        document.getElementById('random-color').textContent = 'Color:';
     }
     if (queue.length === 0) {
         cooldown = 20;
@@ -92,7 +92,7 @@ function checkColor(color, colorButton) {
 function updateTimer() {
     const timerElement = document.getElementById('timer');
     if (timeLeft >= 0 && !isGamePaused) {
-        timerElement.textContent = `Tiempo restante: ${timeLeft} segundos`;
+        timerElement.textContent = `Otro carro se enfilará en: ${timeLeft} segundos`;
     }
     timeLeft--;
 
@@ -101,7 +101,7 @@ function updateTimer() {
         timeLeft = cooldown;
 
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        document.getElementById('random-color').textContent = `Color aleatorio: ${randomColor}`;
+        document.getElementById('random-color').textContent = `Color: ${randomColor}`;
     }
 }
 
