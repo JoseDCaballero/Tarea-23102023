@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ventanilla de Banco</title>
+    <link rel="stylesheet" type="text/css" href="html.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ventanilla de Banco</h1>
+        <div class="input-container">
+            <input type="text" id="nombre" placeholder="Nombre del cliente">
+            <select id="movimiento">
+                <option value="">Seleccionar movimiento</option>
+                <option value="Depósito">Depósito</option>
+                <option value="Retiro">Retiro</option>
+                <option value="Consulta">Consulta</option>
+            </select>
+        </div>
+        <div class="button-container">
+            <button onclick="agregarCliente()">Agregar Cliente a la Cola</button>
+            <button onclick="atenderCliente()">Atender en Ventanilla</button>
+        </div>
+        <h2>Clientes en Cola:</h2>
+        <ul id="cola"></ul>
+    </div>
+    <script src="ventanilla.js"></script>
+</body>
+</html>
