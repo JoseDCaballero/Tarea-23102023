@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="act10.css">    
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <script defer src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="act10.js"></script>
+    
+    <title>Bank window</title>
+</head>
+<body>
+    <main>
+        <div class="container"> <!--Parent container-->
+            <div class="row">
+                <div class="col-5"> <!--Form 5/12-->
+                    <!--FORM-->
+                    <form action="" id="clientForm"> <!---->
+                        <div class="form container py-1">                         
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"> <!--left col-->
+                                    <label for="turn">Turn</label>
+                                </div>
+                                <div class="col"> <!--right col-->
+                                    <label name="turn" id="turnLabel">1</label>
+                                </div>                
+                            </div>
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"> <!--left col-->
+                                    <label for="autoSizingInput">Name</label>
+                                </div>
+                                <div class="col"> <!--right col-->
+                                    <input type="text" required class="form-control form-control-sm" name="name" id="nameInput">
+                                </div>                 
+                            </div>  
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"> <!--left col-->
+                                    <label for="operation">Operation</label>
+                                </div>
+                                <div class="col"> <!--right col-->                                
+                                    <select class="form-select form-select-sm" name="operation" id="operationInput">
+                                        <option selected disabled value="Operation"></option>
+                                        <option value="Deposit">Deposit</option>
+                                        <option value="Cash withdrawal">Cash withdrawal</option>
+                                        <option value="Airtime purchase">Airtime purchase</option>
+                                        <option value="Balance inquiry">Balance inquiry</option>
+                                    </select>                                    
+                                </div>                
+                            </div>
+                            <!--Button row-->
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"><!--EMPTY--></div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-end">
+                                        <button action="click" type="button" class="btn btn-sm btn-outline-primary" id="submitButton">Add to queue</button>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                            <!--New labels-->
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"> <!--left col-->
+                                    <label for="">Attending</label>
+                                </div>
+                                <div class="col"> <!--right col-->
+                                    <label name="turn" id="attendingLabel"></label>
+                                </div>                 
+                            </div>
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"> <!--left col-->
+                                    <label for="">People waiting</label>
+                                </div>
+                                <div class="col"> <!--right col-->
+                                    <label name="turn" id="waitingLabel"></label>
+                                </div>                 
+                            </div>    
+                            <!--Button row-->
+                            <div class="row row-cols-2 mb-3">
+                                <div class="col"><!--EMPTY--></div>
+                                <div class="col">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" id="serveButton">Serve at window</button>
+                                    </div>
+                                </div>
+                            </div><br><br>      
+                        </div>                          
+                    </form>                    
+                </div>
+                <div class="col-7"> <!--Grid 7/12-->
+                    <!--GRID-->
+                    <div class="grid container" id="clientGrid">                        
+                        <div class="headers row row-cols-4 mb-3">
+                            <div class="col mb-3">Turn</div>
+                            <div class="col mb-3">Name</div>
+                            <div class="col mb-3">Operation</div>
+                            <div class="col mb-3">Time of arrival</div>
+                        </div>
+                        <!-- We fill our grid with rows using JS -->
+                    </div>
+                </div>
+            </div>
+            <!--Row for new button-->
+        </div>
+    </main>    
+</body>
+</html>
