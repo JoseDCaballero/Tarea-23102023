@@ -1,6 +1,6 @@
 function sumarNumerosGrandes() {
-    const numero1 = document.getElementById("first").value;
-    const numero2 = document.getElementById("second").value;
+    const numero1 = document.getElementById("first").value.toString();
+    const numero2 = document.getElementById("second").value.toString();
 
     const resultado = sumaNumerosGrandes(numero1, numero2);
 
@@ -8,7 +8,7 @@ function sumarNumerosGrandes() {
 }
 
 function sumaNumerosGrandes(num1, num2) {
-// Convierte los números a pilas
+    // Convierte los números a pilas
     const pila1 = num1.split('').map(Number);
     const pila2 = num2.split('').map(Number);
     const resultado = [];
@@ -25,14 +25,8 @@ function sumaNumerosGrandes(num1, num2) {
     }
 
     if (carry) {
-    resultado.push(carry);
+        resultado.push(carry);
     }
 
     return resultado.reverse().join('');
 }
-
-const numero1 = "123456789012345678901234567890";
-const numero2 = "987654321098765432109876543210";
-
-const resultado = sumaNumerosGrandes(numero1, numero2);
-console.log("Resultado: " + resultado);  
