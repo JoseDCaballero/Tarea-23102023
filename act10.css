@@ -1,0 +1,21 @@
+*
+{
+    box-sizing: border-box;
+}
+button
+{
+    position: absolute;
+}
+.container
+{         
+    background-color: aquamarine;    
+}
+.form
+{      
+    text-align: center;
+    background-color: rgb(176, 118, 230);
+}
+.grid
+{    
+    background-color: rgb(216, 84, 84);
+}
