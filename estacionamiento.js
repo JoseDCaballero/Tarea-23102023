@@ -40,7 +40,7 @@ function mostrarFormulario(tipo) {
     }
 }
 
-function registrarEntrada() {
+/*function registrarEntrada() {
     const placas = document.getElementById('placas').value;
     const propietario = document.getElementById('propietario').value;
 
@@ -58,7 +58,34 @@ function registrarEntrada() {
     document.getElementById('propietario').value = '';
 
     document.getElementById('resultado').innerHTML = `Entrada registrada para ${auto.propietario}`;
+}*/
+
+function registrarEntrada() {
+    const placas = document.getElementById('placas').value;
+    const propietario = document.getElementById('propietario').value;
+
+    if (placas === '' || propietario === '') {
+        alert('No se pueden dejar campos vacíos.');
+        return;
+    }
+
+    // Validar si la matrícula ya existe en el estacionamiento
+    const matriculaExistente = estacionamiento.autos.find(auto => auto.placas === placas);
+    if (matriculaExistente) {
+        alert('Esta matrícula ya está en el estacionamiento.');
+    } else {
+        const horaEntrada = new Date();
+
+        const auto = new Auto(placas, propietario, horaEntrada);
+        estacionamiento.queue(auto);
+
+        document.getElementById('placas').value = '';
+        document.getElementById('propietario').value = '';
+
+        document.getElementById('resultado').innerHTML = `Entrada registrada para ${auto.propietario}`;
+    }
 }
+
 
 function registrarSalida() {
     if (estacionamiento.isEmpty()) {
